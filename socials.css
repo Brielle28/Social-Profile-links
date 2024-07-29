@@ -84,3 +84,12 @@ button:hover{
 .buttons button a:hover {
     color: rgb(0, 0, 0);
 }
+
+
+/* RESPONSIVENESS */
+@media only screen and (max-width: 600px) {
+    .body{ 
+        margin-top: 0px;
+    }
+} 
+
