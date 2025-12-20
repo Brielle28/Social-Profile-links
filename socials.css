@@ -1,95 +1,174 @@
 *{
    margin: 0;
    padding: 0;
-   background-color: black;
+   box-sizing: border-box;
 }
+
 body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-
+    min-height: 100vh;
+    background-color: black;
+    padding: 20px;
 }
+
 .body{
     display: flex;
-    background-color: 	rgb(34, 37, 35);
+    background-color: rgb(34, 37, 35);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
-    padding: 20px 30px;
+    padding: 40px;
     border-radius: 10px; 
     box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.5);
+    width: 100%;
+    max-width: 400px;
 }
+
 .details{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: 	rgb(34, 37, 35);
+    background-color: rgb(34, 37, 35);
+    width: 100%;
 }
-  .image-container {
+
+.image-container {
     width: 140px;
     height: 140px;
-    border-radius: 600px; 
+    border-radius: 50%; 
     margin-bottom: 20px;
     background-image: url("media/picture.jpg"); 
-    background-size: cover; 
+    background-size: cover;
+    background-position: center;
+}
 
-  }
 .name{
     margin-top: 10px;
     color: white;
-    font-size: 25px;
+    font-size: clamp(20px, 5vw, 25px);
     font-weight: bold;
     background-color: transparent;
+    text-align: center;
 }
+
 .Location{
     color: yellow;
     margin-top: 5px;
-    font-size: 19px;
-    background-color: 	rgb(34, 37, 35);
+    font-size: clamp(16px, 4vw, 19px);
+    background-color: rgb(34, 37, 35);
+    text-align: center;
 }
+
 .occupation{
     color: aliceblue;
-    font-size: 15px;
+    font-size: clamp(13px, 3.5vw, 15px);
     padding-top: 6px;
-    background-color: 	rgb(34, 37, 35);
+    background-color: rgb(34, 37, 35);
+    text-align: center;
 }
+
 .buttons{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     margin-top: 25px;
     width: 100%;
-    background-color:rgb(34, 37, 35);
-
+    background-color: rgb(34, 37, 35);
 }
+
 button{
-    height: 40px;
+    height: 50px;
     border-radius: 10px;
     color: rgb(61, 60, 60);
     outline: none;
+    border: none;
+    background-color: rgb(51, 51, 51);
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
+
 button:hover{
     background-color: rgb(255, 255, 0);
     color: black;
+    transform: translateY(-2px);
 }
+
 .buttons button a {
     text-decoration: none;
     color: white;
-    font-size: 15px;
+    font-size: clamp(14px, 3.5vw, 15px);
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
+
 .buttons button a:hover {
     color: rgb(0, 0, 0);
 }
 
-
 /* RESPONSIVENESS */
-@media only screen and (max-width: 600px) {
-    .body{ 
-        margin-top: 0px;
+/* Extra small devices (phones, 320px and up) */
+@media only screen and (max-width: 480px) {
+    body {
+        padding: 10px;
     }
-} 
+    
+    .body {
+        padding: 30px 20px;
+        margin: 0;
+    }
+    
+    .image-container {
+        width: 120px;
+        height: 120px;
+    }
+    
+    button {
+        height: 45px;
+    }
+}
+
+/* Small devices (landscape phones, 481px and up) */
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+    .body {
+        padding: 35px 25px;
+    }
+}
+
+/* Medium devices (tablets, 601px and up) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .body {
+        max-width: 450px;
+        padding: 45px;
+    }
+}
+
+/* Large devices (desktops, 769px and up) */
+@media only screen and (min-width: 769px) {
+    .body {
+        max-width: 400px;
+    }
+}
+
+/* Extra large devices (large desktops, 1024px and up) */
+@media only screen and (min-width: 1024px) {
+    .body {
+        max-width: 420px;
+        padding: 50px;
+    }
+}
+
+/* Very large screens (1440px and up) */
+@media only screen and (min-width: 1440px) {
+    .body {
+        max-width: 450px;
+    }
+}
 
